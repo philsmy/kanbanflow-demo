@@ -1,0 +1,8 @@
+{
+  id: @visual_signal.id,
+  title: @visual_signal.title,
+  description: @visual_signal.description,
+  column_id: @visual_signal.column_id,
+  created_at: @visual_signal.created_at,
+  updated_at: @visual_signal.updated_at
+}

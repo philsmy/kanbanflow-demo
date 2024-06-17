@@ -1,0 +1,6 @@
+{
+  id: @board.id,
+  name: @board.name,
+  created_at: @board.created_at,
+  updated_at: @board.updated_at
+}

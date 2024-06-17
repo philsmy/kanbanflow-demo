@@ -1,0 +1,7 @@
+{
+  id: @column.id,
+  name: @column.name,
+  board_id: @column.board_id,
+  created_at: @column.created_at,
+  updated_at: @column.updated_at
+}

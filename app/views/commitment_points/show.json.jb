@@ -1,0 +1,7 @@
+{
+  id: @commitment_point.id,
+  name: @commitment_point.name,
+  board_id: @commitment_point.board_id,
+  created_at: @commitment_point.created_at,
+  updated_at: @commitment_point.updated_at
+}

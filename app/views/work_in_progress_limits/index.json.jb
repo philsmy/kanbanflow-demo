@@ -1,0 +1,8 @@
+@work_in_progress_limits.map do |work_in_progress_limit|
+  {
+    id: work_in_progress_limit.id,
+    limit: work_in_progress_limit.limit,
+    column_id: work_in_progress_limit.column_id,
+    url: work_in_progress_limit_url(work_in_progress_limit, format: :json)
+  }
+end

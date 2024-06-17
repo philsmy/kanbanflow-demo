@@ -1,0 +1,9 @@
+@visual_signals.map do |visual_signal|
+  {
+    id: visual_signal.id,
+    title: visual_signal.title,
+    description: visual_signal.description,
+    column_id: visual_signal.column_id,
+    url: visual_signal_url(visual_signal, format: :json)
+  }
+end

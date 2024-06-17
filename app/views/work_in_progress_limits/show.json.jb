@@ -1,0 +1,7 @@
+{
+  id: @work_in_progress_limit.id,
+  limit: @work_in_progress_limit.limit,
+  column_id: @work_in_progress_limit.column_id,
+  created_at: @work_in_progress_limit.created_at,
+  updated_at: @work_in_progress_limit.updated_at
+}

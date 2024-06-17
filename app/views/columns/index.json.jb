@@ -1,0 +1,8 @@
+@columns.map do |column|
+  {
+    id: column.id,
+    name: column.name,
+    board_id: column.board_id,
+    url: column_url(column, format: :json)
+  }
+end

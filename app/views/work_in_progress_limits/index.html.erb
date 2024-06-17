@@ -1,0 +1,21 @@
+<div class="w-full">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <% content_for :title, "Work in progress limits" %>
+
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-4xl">Work in progress limits</h1>
+    <%= link_to "New work in progress limit", new_work_in_progress_limit_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  </div>
+
+  <div id="work_in_progress_limits" class="min-w-full">
+    <% @work_in_progress_limits.each do |work_in_progress_limit| %>
+      <%= render work_in_progress_limit %>
+      <p>
+        <%= link_to "Show this work in progress limit", work_in_progress_limit, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      </p>
+    <% end %>
+  </div>
+</div>

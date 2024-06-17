@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  redis:
+    image: redis:7.0.8
+    command: redis-server --appendonly yes
+    ports:
+      - target: 6379
+        published: 16857
+        protocol: tcp
+        mode: host
+    volumes:
+        - redis_data:/data
+    restart: always
+    environment:
+      - REDIS_REPLICATION_MODE=master
+volumes:
+  redis_data:
+    driver: local

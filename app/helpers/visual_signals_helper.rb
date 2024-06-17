@@ -1,0 +1,2 @@
+module VisualSignalsHelper
+end

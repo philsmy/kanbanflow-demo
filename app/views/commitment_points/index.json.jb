@@ -1,0 +1,8 @@
+@commitment_points.map do |commitment_point|
+  {
+    id: commitment_point.id,
+    name: commitment_point.name,
+    board_id: commitment_point.board_id,
+    url: commitment_point_url(commitment_point, format: :json)
+  }
+end

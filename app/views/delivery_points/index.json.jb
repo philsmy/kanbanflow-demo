@@ -1,0 +1,8 @@
+@delivery_points.map do |delivery_point|
+  {
+    id: delivery_point.id,
+    name: delivery_point.name,
+    board_id: delivery_point.board_id,
+    url: delivery_point_url(delivery_point, format: :json)
+  }
+end

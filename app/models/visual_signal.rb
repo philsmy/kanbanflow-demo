@@ -18,5 +18,7 @@
 #  column_id  (column_id => columns.id)
 #
 class VisualSignal < ApplicationRecord
-  belongs_to :column
+  belongs_to :column, touch: true
+
+  broadcasts_refreshes
 end

@@ -17,7 +17,9 @@
 #  board_id  (board_id => boards.id)
 #
 class Column < ApplicationRecord
-  belongs_to :board
+  belongs_to :board, touch: true
   has_many :visual_signals, dependent: :destroy
   has_one :work_in_progress_limit, dependent: :destroy
+
+  broadcasts_refreshes
 end

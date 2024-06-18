@@ -11,4 +11,6 @@ class Board < ApplicationRecord
   has_many :columns, dependent: :destroy
   has_one :commitment_point, dependent: :destroy
   has_one :delivery_point, dependent: :destroy
+
+  broadcasts_refreshes
 end

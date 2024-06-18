@@ -25,7 +25,10 @@ class ColumnsController < ApplicationController
     @column = @board.columns.new(column_params)
 
     if @column.save
-      redirect_to @board, notice: "Column was successfully created."
+      respond_to do |format|
+        format.html { redirect_to @board, notice: "Column was successfully created.", status: :see_other }
+        format.turbo_stream
+      end
     else
       render :new, status: :unprocessable_entity
     end

@@ -25,7 +25,10 @@ class VisualSignalsController < ApplicationController
     @visual_signal = @column.visual_signals.new(visual_signal_params)
 
     if @visual_signal.save
-      redirect_to @column.board, notice: "Visual signal was successfully created."
+      respond_to do |format|
+        format.html { redirect_to @column.board, notice: "Visual signal was successfully created.", status: :see_other }
+        format.turbo_stream
+      end
     else
       render :new, status: :unprocessable_entity
     end

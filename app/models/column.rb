@@ -20,4 +20,6 @@ class Column < ApplicationRecord
   belongs_to :board
   has_many :visual_signals, dependent: :destroy
   has_one :work_in_progress_limit, dependent: :destroy
+
+  broadcasts_to ->(column) { column }, inserts_by: :prepend, target: "column"
 end

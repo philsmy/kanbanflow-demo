@@ -7,8 +7,9 @@
         <%= button_tag(type: 'submit', class: "ml-4 text-blue-500 bg-transparent border-none p-0", title: "Add new column") do %> <i class="fa-duotone fa-plus"></i> <% end %>
       <% end %>      
     </h2>
-    <div class="flex space-x-4 overflow-x-auto">
+    <div id="<%= dom_id board, :columns %>" class="flex space-x-4 overflow-x-auto">
       <% board.columns.each do |column| %>
+        <%= turbo_stream_from column %>
         <%= render column %>
       <% end %>
     </div>
